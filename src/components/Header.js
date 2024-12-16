@@ -1,21 +1,31 @@
 import React from "react";
-import "./Header.css";
+import "../css/Header.css";
+import { Link } from "react-router-dom"; // Importa o Link do React Router
 
 const Header = () => {
   return (
     <nav className="nav">
       <div className="menu">
+        {/* Botões com navegação via Link */}
         <button className="button">
-          <a href="#landing">Home</a>
+          <Link to="/" className="link">
+            Home
+          </Link>
         </button>
         <button className="button">
-          <a href="#quando-fazer">Quando Fazer</a>
+          <Link to="/quando-fazer" className="link">
+            Quando Fazer
+          </Link>
         </button>
         <button className="button">
-          <a href="#agenda">Agenda</a>
+          <Link to="/agenda" className="link">
+            Agenda
+          </Link>
         </button>
         <button className="button">
-          <a href="#sobre">Sobre</a>
+          <Link to="/sobre" className="link">
+            Sobre
+          </Link>
         </button>
       </div>
     </nav>
